@@ -47,18 +47,12 @@ public class PreconditionError extends Exception {
 	}
 
 	/**
-	 * @param arg0
-	 * @param arg1
-	 * @param arg2
-	 * @param arg3
+	 * 
+	 * @param expression If this is true, then the exception is thrown, otherwise
+	 * nothing will happen.
+	 * @param message Is the message to add to the exception if it is thrown.
+	 * @throws PreconditionError
 	 */
-	public PreconditionError(String arg0, Throwable arg1, boolean arg2,
-			boolean arg3) {
-		super(arg0, arg1, arg2, arg3);
-		// TODO Auto-generated constructor stub
-	}
-	
-	
 	static public void Test(boolean expression, String message) throws PreconditionError {
 		if (!expression)
 			return;

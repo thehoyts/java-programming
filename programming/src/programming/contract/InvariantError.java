@@ -47,17 +47,12 @@ public class InvariantError extends Exception {
 	}
 
 	/**
-	 * @param message
-	 * @param cause
-	 * @param enableSuppression
-	 * @param writableStackTrace
+	 * 
+	 * @param expression If this is true, then the exception is thrown, otherwise
+	 * nothing will happen.
+	 * @param message Is the message to add to the exception if it is thrown.
+	 * @throws PreconditionError
 	 */
-	public InvariantError(String message, Throwable cause,
-			boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
-		// TODO Auto-generated constructor stub
-	}
-
 	static public void Test(boolean expression, String message) throws InvariantError {
 		if (!expression)
 			return;

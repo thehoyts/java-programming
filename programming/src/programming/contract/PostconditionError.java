@@ -9,10 +9,12 @@ package programming.contract;
  */
 public class PostconditionError extends Exception {
 
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -5031993278336991146L;
+	private static final long serialVersionUID = -1271304296700152807L;
+
 
 	/**
 	 * 
@@ -46,18 +48,14 @@ public class PostconditionError extends Exception {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @param message
-	 * @param cause
-	 * @param enableSuppression
-	 * @param writableStackTrace
-	 */
-	public PostconditionError(String message, Throwable cause,
-			boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
-		// TODO Auto-generated constructor stub
-	}
 
+	/**
+	 * 
+	 * @param expression If this is true, then the exception is thrown, otherwise
+	 * nothing will happen.
+	 * @param message Is the message to add to the exception if it is thrown.
+	 * @throws PreconditionError
+	 */
 	static public void Test(boolean expression, String message) throws PostconditionError {
 		if (!expression)
 			return;
